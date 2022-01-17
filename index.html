@@ -4,25 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wallet Balance</title>
+  <title>My Space Punks</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="h-full">
+<body class="h-full bg-gray-700">
 
-  <main class="p-10 flex justify-center items-center min-h-full">
-    <button id="connect_button" class="border-2 border-blue-500 hover:bg-blue-100 transition-colors px-4 py-1 uppercase rounded-md text-blue-800 text-xl font-semibold">
-      Connect Wallet
-    </button>
+  <main class="p-10 flex justify-center min-h-full">
+    <div class="w-4/5">
+      <div class="mb-10">
+        <input type="text" id="wallet_address" autofocus autocomplete="off" value="0x80efF130ddE6223a10e6ab27e35ee9456b635cCD" placeholder="Wallet address" class="w-2/5 border-2 border-blue-500 px-4 py-1 uppercase rounded-md text-xl text-blue-800 font-semibold outline-none">
 
-    <section id="wallet_info" hidden>
-      <h1 id="wallet_address"></h1>
-      <h2>Balance: <span id="wallet_balance"></span> ETH</h2>
-    </section>
+        <button id="load_button" class="border-2 border-blue-500 bg-blue-700 text-white transition-colors px-4 outline-none py-1 uppercase rounded-md text-xl font-semibold">
+          Load Space Punk NFTs
+        </button>
+      </div>
+
+      <div id="nfts" class="flex gap-7 flex-wrap"></div>
+    </div>
   </main>
+
+  <template id="nft_template">
+    <section>
+      <h1 class="font-bold bg-yellow-500 text-white text-center rounded-t-md"></h1>
+
+      <a href="" target="_blank">
+        <img class="rounded-b-md w-40 h-40" src="" alt="">
+      </a>
+    </section>
+  </template>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
 
-  <script src="index.js"></script>
+  <script type="module" src="index.js"></script>
 </body>
 </html>
