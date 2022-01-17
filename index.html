@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Balance</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full">
+
+  <main class="p-10 flex justify-center items-center min-h-full">
+    <button id="connect_button" class="border-2 border-blue-500 hover:bg-blue-100 transition-colors px-4 py-1 uppercase rounded-md text-blue-800 text-xl font-semibold">
+      Connect Wallet
+    </button>
+
+    <section id="wallet_info" hidden>
+      <h1 id="wallet_address"></h1>
+      <h2>Balance: <span id="wallet_balance"></span> ETH</h2>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+
+  <script src="index.js"></script>
+</body>
+</html>
